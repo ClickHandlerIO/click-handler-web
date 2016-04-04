@@ -1,0 +1,2 @@
+!function(e){function n(t){if(r[t])return r[t].e;var i=r[t]={e:{},i:t,l:!1};return e[t].call(i.e,i,i.e,n),i.l=!0,i.e}var r={};return n.m=e,n.c=r,n.p="",n(n.s=1)}([function(e,n){window.Camber={hello:"there"}},function(e,n,r){e.e=r(0)}]);
+//# sourceMappingURL=camber-webpack.js.map
