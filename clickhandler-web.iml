@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="gwt" name="GWT">
+      <configuration>
+        <setting name="compilerMaxHeapSize" value="1024" />
+        <setting name="gwtScriptOutputStyle" value="DETAILED" />
+        <setting name="gwtSdkUrl" value="file://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.8.0-20160403.060003-213/" />
+        <setting name="gwtSdkType" value="maven" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: io.clickhandler:web:0.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.google.dagger:dagger-compiler:2.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.dagger:dagger:2.0.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.dagger:dagger-producers:2.0-beta" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
+    <orderEntry type="library" name="Maven: io.clickhandler:dagger-gwt:0.1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: io.clickhandler:javax-inject-gwt:0.1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.google.gwt:gwt-user:2.8.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.google.jsinterop:jsinterop-annotations:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.google.jsinterop:jsinterop-annotations:sources:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.0.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:sources:1.0.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: com.google.gwt:gwt-dev:2.8.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-util:5.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-tree:5.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-commons:5.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.google.gwt:gwt-elemental:2.8.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.google.auto:auto-common:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: io.clickhandler:moment-gwt:0.1.0-SNAPSHOT" level="project" />
+  </component>
+</module>
