@@ -19,7 +19,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: io.clickhandler:web:0.2.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.google.dagger:dagger-compiler:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.dagger:dagger:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />

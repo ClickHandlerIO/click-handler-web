@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module>
+    <inherits name="io.clickhandler.web.ReactGwt"/>
+
+    <source path="camber/client"/>
+    <source path="camber/resources"/>
+    <public path="camber/public"/>
+</module>

@@ -1,19 +1,17 @@
 package example.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.ScriptInjector;
 import dagger.Module;
 import dagger.Provides;
 import elemental.client.Browser;
-import example.client.resources.Camber;
-import io.clickhandler.web.client.Bus;
-import io.clickhandler.web.client.dom.DOM;
-import io.clickhandler.web.client.dom.ReactDOM;
-import io.clickhandler.web.client.react.ReactComponent;
-import io.clickhandler.web.client.react.ReactElement;
-import io.clickhandler.web.client.router.History;
-import io.clickhandler.web.client.router.ReactRouter;
-import io.clickhandler.web.resources.ClickHandlerWebResourceBundle;
+import io.clickhandler.web.camber.client.Camber;
+import io.clickhandler.web.reactGwt.client.Bus;
+import io.clickhandler.web.reactGwt.client.dom.DOM;
+import io.clickhandler.web.reactGwt.client.dom.ReactDOM;
+import io.clickhandler.web.reactGwt.client.react.ReactComponent;
+import io.clickhandler.web.reactGwt.client.react.ReactElement;
+import io.clickhandler.web.reactGwt.client.router.History;
+import io.clickhandler.web.reactGwt.client.router.ReactRouter;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,7 +38,7 @@ public class Main implements EntryPoint {
 //        init();
 //        Camber.inject();
         // inject WebpackOutput
-        ScriptInjector.fromString(ClickHandlerWebResourceBundle.INSTANCE.WebpackOutput().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        Camber.init();
 
 //        MyComponent.instance.hiComponent().getReactClass();
 //        Browser.getWindow().getConsole().log(MyComponent.instance.hiComponent());
@@ -115,7 +113,7 @@ public class Main implements EntryPoint {
 //    }
 
     @Singleton
-    public static class HiComponent extends io.clickhandler.web.client.react.Component<HiComponent.Props, HiComponent.State> {
+    public static class HiComponent extends io.clickhandler.web.reactGwt.client.react.Component<HiComponent.Props, HiComponent.State> {
         @Inject
         public HiComponent() {
         }
