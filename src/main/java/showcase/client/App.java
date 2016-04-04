@@ -8,7 +8,6 @@ import io.clickhandler.web.reactGwt.client.router.History;
 import io.clickhandler.web.reactGwt.client.router.ReactRouter;
 import io.clickhandler.web.reactGwt.client.router.RouteGatekeeper;
 import io.clickhandler.web.reactGwt.client.util.Is;
-import showcase.client.modules.Routes;
 import showcase.client.modules.ShowcaseRootModule;
 import showcase.client.modules._gatekeepers.RouteListener;
 
