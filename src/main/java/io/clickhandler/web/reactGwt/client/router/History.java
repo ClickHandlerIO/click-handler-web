@@ -5,7 +5,7 @@ import jsinterop.annotations.JsType;
 /**
  *
  */
-@JsType(isNative = true)
+@JsType(isNative = true, namespace = "ReactRouter")
 public interface History {
     void transitionTo(LocationDescriptor location);
 

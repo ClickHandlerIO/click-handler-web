@@ -6,7 +6,7 @@ import jsinterop.annotations.JsType;
 /**
  *
  */
-@JsType(isNative = true)
+@JsType(isNative = true, namespace = "ReactRouter")
 public interface Router extends History {
     @JsMethod
     void setRouteLeaveHook(Route route, io.clickhandler.web.reactGwt.client.router.RouteHook hook);
