@@ -1,20 +1,19 @@
 package example.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.ScriptInjector;
-import dagger.Component;
 import dagger.Module;
 import dagger.Provides;
 import elemental.client.Browser;
-import example.client.resources.Resources;
-import io.clickhandler.web.Bus;
-import io.clickhandler.web.dom.DOM;
-import io.clickhandler.web.dom.ReactDOM;
-import io.clickhandler.web.react.ReactComponent;
-import io.clickhandler.web.react.ReactElement;
-import io.clickhandler.web.router.History;
-import io.clickhandler.web.router.ReactRouter;
+import example.client.resources.Camber;
+import io.clickhandler.web.client.Bus;
+import io.clickhandler.web.client.dom.DOM;
+import io.clickhandler.web.client.dom.ReactDOM;
+import io.clickhandler.web.client.react.ReactComponent;
+import io.clickhandler.web.client.react.ReactElement;
+import io.clickhandler.web.client.router.History;
+import io.clickhandler.web.client.router.ReactRouter;
+import io.clickhandler.web.resources.ClickHandlerWebResourceBundle;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,21 +26,24 @@ import java.util.Date;
  *
  */
 public class Main implements EntryPoint {
-    static final Resources INSTANCE = GWT.create(Resources.class);
-
-    static void init() {
-        final Resources bundle = INSTANCE;
-        ScriptInjector.fromString(bundle.js_react().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
-        ScriptInjector.fromString(bundle.js_react_dom().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
-        ScriptInjector.fromString(bundle.js_react_router().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
-    }
+//    static final Resources INSTANCE = GWT.create(Resources.class);
+//
+//    static void init() {
+//        final Resources bundle = INSTANCE;
+//        ScriptInjector.fromString(bundle.js_react().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+//        ScriptInjector.fromString(bundle.js_react_dom().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+//        ScriptInjector.fromString(bundle.js_react_router().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+//    }
 
     @Override
     public void onModuleLoad() {
-        init();
+//        init();
+//        Camber.inject();
+        // inject WebpackOutput
+        ScriptInjector.fromString(ClickHandlerWebResourceBundle.INSTANCE.WebpackOutput().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
 
-        MyComponent.instance.hiComponent().getReactClass();
-        Browser.getWindow().getConsole().log(MyComponent.instance.hiComponent());
+//        MyComponent.instance.hiComponent().getReactClass();
+//        Browser.getWindow().getConsole().log(MyComponent.instance.hiComponent());
 
 //        // Create Router.
 //        final ReactElement router =
@@ -57,18 +59,16 @@ public class Main implements EntryPoint {
 //        // Render.
 //        ReactDOM.render(router, Browser.getDocument().getElementById(elementId));
 
-        ReactDOM.render(MyComponent.instance.hiComponent().$(
-            $ -> $.name("Fluent Setter")
-        ), Browser.getDocument().getElementById("app"));
+        ReactDOM.render(DOM.div("Hi", DOM.button("Click Me")), Browser.getDocument().getElementById("app"));
     }
 
-    @Singleton
-    @Component(modules = M.class)
-    public interface MyComponent {
-        MyComponent instance = DaggerMain_MyComponent.create();
-
-        HiComponent hiComponent();
-    }
+//    @Singleton
+//    @Component(modules = M.class)
+//    public interface MyComponent {
+//        MyComponent instance = DaggerMain_MyComponent.create();
+//
+//        HiComponent hiComponent();
+//    }
 
     @Module
     public static class M {
@@ -83,7 +83,7 @@ public class Main implements EntryPoint {
     }
 
 //    @Singleton
-//    public static class HiComponent extends io.clickhandler.web.react.Component<HiComponent.Props, HiComponent.State> {
+//    public static class HiComponent extends Component<HiComponent.Props, HiComponent.State> {
 //        @Inject
 //        public HiComponent() {
 //        }
@@ -115,7 +115,7 @@ public class Main implements EntryPoint {
 //    }
 
     @Singleton
-    public static class HiComponent extends io.clickhandler.web.react.Component<HiComponent.Props, HiComponent.State> {
+    public static class HiComponent extends io.clickhandler.web.client.react.Component<HiComponent.Props, HiComponent.State> {
         @Inject
         public HiComponent() {
         }

@@ -10,6 +10,7 @@
     <inherits name="io.clickhandler.web.Web"/>
 
     <source path="client"/>
+    <source path="resources"/>
     <public path="public"/>
 
     <entry-point class="example.client.Main"/>

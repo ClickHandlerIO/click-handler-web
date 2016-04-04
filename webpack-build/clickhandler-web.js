@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import {Router, Route, Link} from "react-router";
 import injectTapEventPlugin from "react-tap-event-plugin";
 
-this.React = React;
-this.ReactDOM = ReactDOM;
-this.ReactRouter = {
+window.React = React;
+window.ReactDOM = ReactDOM;
+window.ReactRouter = {
     Router: Router,
     Route: Route,
     Link: Link
 };
-this.injectTapEventPlugin = injectTapEventPlugin;
+injectTapEventPlugin();

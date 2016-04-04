@@ -13689,14 +13689,14 @@
 	
 	
 	
-	this.React = /* harmony import */__WEBPACK_IMPORTED_MODULE_0_react___default.a;
-	this.ReactDOM = /* harmony import */__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a;
-	this.ReactRouter = {
+	window.React = /* harmony import */__WEBPACK_IMPORTED_MODULE_0_react___default.a;
+	window.ReactDOM = /* harmony import */__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a;
+	window.ReactRouter = {
 	    Router: /* harmony import */__WEBPACK_IMPORTED_MODULE_2_react_router__["Router"],
 	    Route: /* harmony import */__WEBPACK_IMPORTED_MODULE_2_react_router__["Route"],
 	    Link: /* harmony import */__WEBPACK_IMPORTED_MODULE_2_react_router__["Link"]
 	};
-	this.injectTapEventPlugin = /* harmony import */__WEBPACK_IMPORTED_MODULE_3_react_tap_event_plugin___default.a;
+	/* harmony import */__WEBPACK_IMPORTED_MODULE_3_react_tap_event_plugin___default.a.bind()();
 
 /***/ },
 /* 116 */
