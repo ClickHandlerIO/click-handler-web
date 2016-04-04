@@ -1,4 +1,4 @@
-package showcase.client.modules.home;
+package showcase.client.modules.gettingStarted;
 
 import io.clickhandler.web.reactGwt.client.react.ReactComponent;
 import io.clickhandler.web.reactGwt.client.react.ReactElement;
@@ -16,10 +16,10 @@ import static io.clickhandler.web.reactGwt.client.dom.DOM.a;
 import static io.clickhandler.web.reactGwt.client.dom.DOM.div;
 
 @Singleton
-public class HomePage extends SimpleRouteComponent<HomePage.Route, HomePage.Props, HomePage.State> {
+public class GettingStartedPage extends SimpleRouteComponent<GettingStartedPage.Route, GettingStartedPage.Props, GettingStartedPage.State> {
 
     @Inject
-    public HomePage() {
+    public GettingStartedPage() {
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,8 +29,8 @@ public class HomePage extends SimpleRouteComponent<HomePage.Route, HomePage.Prop
     @Override
     protected ReactElement render(ReactComponent $this, Props props, State state) {
         return div(
-                "home page",
-                a($ -> $.onClick(e -> App.getRoutes().getGettingStartedRoutes().getGettingStartedPage().go()), "Go to Getting Started")
+                "getting started page",
+                a($ -> $.onClick(e -> App.getRoutes().getHome().getHomePage().go()), "Go To Home Page")
         );
     }
 
@@ -57,7 +57,7 @@ public class HomePage extends SimpleRouteComponent<HomePage.Route, HomePage.Prop
     public static class Route extends SimpleRouteProxy {
         @Inject
         public Route(RootRoute parent) {
-            super("home", parent);
+            super("gettingStarted", parent);
         }
     }
 }

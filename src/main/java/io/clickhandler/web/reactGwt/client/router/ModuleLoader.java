@@ -20,7 +20,7 @@ public abstract class ModuleLoader {
     private boolean registeredModulesCalled;
 
     public ModuleLoader(String prefix) {
-        this.prefix = prefix;
+        this.prefix = prefix.toLowerCase();
     }
 
     public String getPrefix() {

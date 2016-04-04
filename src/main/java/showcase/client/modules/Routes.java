@@ -1,5 +1,6 @@
 package showcase.client.modules;
 
+import showcase.client.modules.gettingStarted.GettingStartedPage;
 import showcase.client.modules.home.HomePage;
 
 import javax.inject.Inject;
@@ -10,13 +11,6 @@ public class Routes {
 
     @Inject
     public Routes() {
-    }
-
-    @Inject
-    HomeRoutes home;
-
-    public HomeRoutes getHome() {
-        return home;
     }
 
     public static class HomeRoutes {
@@ -30,5 +24,32 @@ public class Routes {
         public HomePage.Route getHomePage() {
             return homePage;
         }
+    }
+
+    @Inject
+    HomeRoutes home;
+
+    public HomeRoutes getHome() {
+        return home;
+    }
+
+    public static class GettingStartedRoutes {
+        @Inject
+        GettingStartedPage.Route gettingStartedPage;
+
+        @Inject
+        public GettingStartedRoutes() {
+        }
+
+        public GettingStartedPage.Route getGettingStartedPage() {
+            return gettingStartedPage;
+        }
+    }
+
+    @Inject
+    GettingStartedRoutes gettingStartedRoutes;
+
+    public GettingStartedRoutes getGettingStartedRoutes() {
+        return gettingStartedRoutes;
     }
 }
