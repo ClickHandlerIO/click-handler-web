@@ -53,14 +53,14 @@ public abstract class RootModule extends ModuleLoader {
                 () -> routeGatekeeper.get().onLeave(rootRoute));
     }
 
-    public void start(String elementId, Func.Run beforeRender) {
+    public void start(String elementId) {
         // Create Router.
         final ReactElement router =
             ReactRouter.create(new RouterProps()
                 .history(history())
                 .routes(appRoute()));
 
-        Try.run(beforeRender);
+//        Try.run(beforeRender);
 
         // Render.
         ReactDOM.render(router, Browser.getDocument().getElementById(elementId));
