@@ -1,4 +1,8 @@
 @import "vars";
 // todo import css reset
 // todo import font defaults
-// todo import controls
+
+
+// Controls
+@import "../client/ripples/touch-ripple";
+@import "../client/ripples/circle-ripple";
