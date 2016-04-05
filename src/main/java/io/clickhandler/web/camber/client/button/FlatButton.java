@@ -16,6 +16,10 @@ public class FlatButton extends Component<FlatButton.Props, FlatButton.State> {
     @Inject
     ButtonBase buttonBase;
 
+    @Inject
+    public FlatButton() {
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Render
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -24,6 +28,7 @@ public class FlatButton extends Component<FlatButton.Props, FlatButton.State> {
     protected ReactElement render(ReactComponent<Props, State> $this, Props props, State state) {
         return buttonBase.$($ -> {
                     $.setClassName("camber__flat-button " + props.getClassName());
+                    $.setTagName("button");
                     $.setOnClick(props.getOnClick());
                 },
                 props.getChildren()

@@ -1,0 +1,15 @@
+@import "../../sass/vars";
+
+.camber__flat-button {
+  text-transform: uppercase;
+  border-radius: 2px;
+  line-height: 34px; // todo as programatic prop instead?
+
+  &.primary {
+    color: $color_primary;
+  }
+
+  &.secondary {
+    color: $color_secondary;
+  }
+}

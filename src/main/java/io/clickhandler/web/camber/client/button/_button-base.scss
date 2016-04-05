@@ -1,0 +1,18 @@
+@import "../../sass/vars";
+
+.camber__button-base {
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  color: $color_dark_text;
+  cursor: pointer;
+
+  &:hover:not(.disabled) {
+    background-color: $color_light_grey;
+  }
+
+  &.disabled {
+    color: $color_light_grey;
+    cursor: default;
+  }
+}

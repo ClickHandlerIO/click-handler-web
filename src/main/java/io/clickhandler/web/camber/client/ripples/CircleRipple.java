@@ -8,9 +8,15 @@ import io.clickhandler.web.reactGwt.client.react.ReactComponent;
 import io.clickhandler.web.reactGwt.client.react.ReactElement;
 import jsinterop.annotations.JsType;
 
+import javax.inject.Inject;
+
 import static io.clickhandler.web.reactGwt.client.dom.DOM.div;
 
 public class CircleRipple extends Component<CircleRipple.Props, CircleRipple.State> implements ReactTransitionGroupChild {
+
+    @Inject
+    public CircleRipple() {
+    }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Render

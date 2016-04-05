@@ -22,6 +22,10 @@ public class TouchRipple extends Component<TouchRipple.Props, TouchRipple.State>
     @Inject
     CircleRipple circleRipple;
 
+    @Inject
+    public TouchRipple() {
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Render
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +46,7 @@ public class TouchRipple extends Component<TouchRipple.Props, TouchRipple.State>
                 },
                 state.getRipples().isEmpty() ? null :
                         reactTransitionGroup.$($ -> $.setClassName("transition-group"),
-                                state.getRipples()
+                                state.getRipples().toArray()
                         ),
                 props.getChildren());
     }
@@ -55,6 +59,7 @@ public class TouchRipple extends Component<TouchRipple.Props, TouchRipple.State>
     public State getInitialState(ReactComponent<Props, State> $this) {
         State s = super.getInitialState($this);
         s.setRipples(new ArrayList<>());
+        s.setNextKey(0.);
         return s;
     }
 
