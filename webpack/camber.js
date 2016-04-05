@@ -1,5 +1,5 @@
-// import React from "react";
+import ReactSelect from 'react-select'
 
 window.Camber = {
-    "hello": "there"
+    ReactSelect: ReactSelect
 };

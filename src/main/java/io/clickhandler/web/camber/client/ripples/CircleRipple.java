@@ -1,64 +1,73 @@
-package showcase.client.modules.gettingStarted;
+package io.clickhandler.web.camber.client.ripples;
 
+import io.clickhandler.web.camber.client.transitionGroup.ReactTransitionGroupChild;
+import io.clickhandler.web.reactGwt.client.Func;
+import io.clickhandler.web.reactGwt.client.react.BaseProps;
+import io.clickhandler.web.reactGwt.client.react.Component;
 import io.clickhandler.web.reactGwt.client.react.ReactComponent;
 import io.clickhandler.web.reactGwt.client.react.ReactElement;
-import io.clickhandler.web.reactGwt.client.router.RootRoute;
-import io.clickhandler.web.reactGwt.client.router.SimpleRouteComponent;
-import io.clickhandler.web.reactGwt.client.router.SimpleRouteProps;
-import io.clickhandler.web.reactGwt.client.router.SimpleRouteProxy;
 import jsinterop.annotations.JsType;
-import showcase.client.App;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
-import static io.clickhandler.web.reactGwt.client.dom.DOM.a;
 import static io.clickhandler.web.reactGwt.client.dom.DOM.div;
 
-@Singleton
-public class GettingStartedPage extends SimpleRouteComponent<GettingStartedPage.Route, GettingStartedPage.Props, GettingStartedPage.State> {
-
-    @Inject
-    public GettingStartedPage() {
-    }
+public class CircleRipple extends Component<CircleRipple.Props, CircleRipple.State> implements ReactTransitionGroupChild {
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Render
     ///////////////////////////////////////////////////////////////////////////////////////////////////
 
     @Override
-    protected ReactElement render(ReactComponent $this, Props props, State state) {
-        props();
-        return div(
-                "getting started page",
-                a($ -> $.onClick(e -> App.getRoutes().getHome().getHomePage().go()), "Go To Home Page")
-        );
+    protected ReactElement render(ReactComponent<Props, State> $this, Props props, State state) {
+        return div();
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Component Lifecycle
     ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+    @Override
+    public void componentWillAppear(Func.Run onCompletion) {
+
+    }
+
+    @Override
+    public void componentDidAppear() {
+
+    }
+
+    @Override
+    public void componentWillEnter(Func.Run onCompletion) {
+
+    }
+
+    @Override
+    public void componentDidEnter() {
+
+    }
+
+    @Override
+    public void componentWillLeave(Func.Run onCompletion) {
+
+    }
+
+    @Override
+    public void componentDidLeave() {
+
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Work
     ///////////////////////////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
-    // Props / State / Route / Args
+    // Args / Props / State / Route
     ///////////////////////////////////////////////////////////////////////////////////////////////////
-
     @JsType(isNative = true)
-    public interface Props extends SimpleRouteProps {
+    public interface Props extends BaseProps {
+
     }
 
     @JsType(isNative = true)
     public interface State {
-    }
-
-    public static class Route extends SimpleRouteProxy {
-        @Inject
-        public Route(RootRoute parent) {
-            super("gettingStarted", parent);
-        }
     }
 }

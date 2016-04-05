@@ -1,0 +1,12 @@
+@import "../../sass/vars";
+
+.camber__touch-ripple {
+  .transition-group {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}

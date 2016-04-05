@@ -11,6 +11,7 @@ var config = {
 
     externals: {
         "react": "React",
+        "React": "React",
         "react-dom": "ReactDOM"
     },
 

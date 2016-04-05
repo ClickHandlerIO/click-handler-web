@@ -279,6 +279,7 @@ public abstract class Component<P, S> {
         return (ReactClass) reactClass;
     }
 
+    // todo look at getting rid of / renaming this. can be accidentally used instead of $this.props()
     protected P props() {
         // Create Props.
         final P props = createProps();
