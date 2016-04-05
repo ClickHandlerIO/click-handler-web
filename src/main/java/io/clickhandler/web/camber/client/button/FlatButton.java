@@ -1,5 +1,6 @@
 package io.clickhandler.web.camber.client.button;
 
+import io.clickhandler.web.camber.client.Brand;
 import io.clickhandler.web.reactGwt.client.Func;
 import io.clickhandler.web.reactGwt.client.event.MouseEvent;
 import io.clickhandler.web.reactGwt.client.react.BaseProps;
@@ -27,7 +28,7 @@ public class FlatButton extends Component<FlatButton.Props, FlatButton.State> {
     @Override
     protected ReactElement render(ReactComponent<Props, State> $this, Props props, State state) {
         return buttonBase.$($ -> {
-                    $.setClassName("camber__flat-button " + props.getClassName());
+                    $.setClassName("camber__flat-button" + (props.getClassName() != null ? " " + props.getClassName() : "") + (props.getBrand() != null ? " " + props.getBrand().getClassName() : ""));
                     $.setTagName("button");
                     $.setOnClick(props.getOnClick());
                 },
@@ -54,6 +55,12 @@ public class FlatButton extends Component<FlatButton.Props, FlatButton.State> {
 
         @JsProperty
         void setClassName(String className);
+
+        @JsProperty
+        Brand getBrand();
+
+        @JsProperty
+        void setBrand(Brand brand);
 
         @JsProperty
         Func.Run1<MouseEvent> getOnClick();

@@ -34,20 +34,20 @@ public class TouchRipple extends Component<TouchRipple.Props, TouchRipple.State>
     protected ReactElement render(ReactComponent<Props, State> $this, Props props, State state) {
         return div($ -> {
                     $.className("camber__touch-ripple");
-                    $.onMouseUp(e -> end($this));
-                    $.onMouseDown(e -> {
-                        if (e.getButton().intValue() == 0) {
-                            start($this, e, true);
-                        }
-                    });
-                    $.onMouseLeave(e -> end($this));
-                    $.onTouchStart(e -> start($this, e, true));
-                    $.onTouchEnd(e -> end($this));
+//                    $.onMouseUp(e -> end($this));
+//                    $.onMouseDown(e -> {
+//                        if (e.getButton().intValue() == 0) {
+//                            start($this, e, true);
+//                        }
+//                    });
+//                    $.onMouseLeave(e -> end($this));
+//                    $.onTouchStart(e -> start($this, e, true));
+//                    $.onTouchEnd(e -> end($this));
                 },
-                state.getRipples().isEmpty() ? null :
-                        reactTransitionGroup.$($ -> $.setClassName("transition-group"),
-                                state.getRipples().toArray()
-                        ),
+//                state.getRipples().isEmpty() ? null :
+//                        reactTransitionGroup.$($ -> $.setClassName("transition-group"),
+//                                state.getRipples().toArray()
+//                        ),
                 props.getChildren());
     }
 

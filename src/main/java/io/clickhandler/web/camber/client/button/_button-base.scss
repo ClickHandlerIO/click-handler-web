@@ -1,18 +1,29 @@
-@import "../../sass/vars";
-
 .camber__button-base {
-  user-select: none;
-  position: relative;
-  overflow: hidden;
-  color: $color_dark_text;
+  border: 10px;
+  background: none;
+  box-sizing: border-box;
+  display: inline-block;
+  font: inherit;
   cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  color: $color-gray-dark;
+
+  // needed so ripples do not bleed past border radius.
+  // See: http://stackoverflow.com/questions/17298739/css-overflow-hidden-not-working-in-chrome-when-parent-has-border-radius-and-chil
+  transform: translate3d(0, 0, 0);
 
   &:hover:not(.disabled) {
-    background-color: $color_light_grey;
+    background-color: $color-gray-lighter;
+  }
+
+  &:active:not(.disabled) {
+    background-color: $color-gray-light;
   }
 
   &.disabled {
-    color: $color_light_grey;
+    color: $color-gray-light;
     cursor: default;
   }
 }

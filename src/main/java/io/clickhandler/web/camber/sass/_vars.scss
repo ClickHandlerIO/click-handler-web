@@ -1,26 +1,30 @@
-// BEM prefix. All top level component classes should be prefixed. i.e. $prefix__raised-button
-$prefix: "camber";
-
-// Browser Widths
-
 // Colors
-$color_dark_text: black !default;
-$color_light_text: #fff !default;
-$color_primary: red !default;
-$color_secondary: red !default;
+//
+// Base colors for use across the whole app
+
+$color-primary: #0275d8 !default;
+$color-secondary: #5cb85c !default;
+$color-success: #5cb85c !default;
+$color-info: #5bc0de !default;
+$color-warning: #f0ad4e !default;
+$color-danger: #d9534f !default;
 
 $color_text: red !default;
 $color_text_lighter: red !default;
 
-$color_grey: red !default;
-$color_dark_grey: red !default;
-$color_light_grey: red !default;
+$color-gray-dark:                 #373a3c !default;
+$color-gray:                      #55595c !default;
+$color-gray-light:                #818a91 !default;
+$color-gray-lighter:              #eceeef !default;
+$color-gray-lightest:             #f7f7f9 !default;
 
 // Font Sizes
 $font-size: 12px;
 
 // Padding
 
-
 // Border Radius
+$border-width: 1px;
+
+$enable-print-styles: true;
 
