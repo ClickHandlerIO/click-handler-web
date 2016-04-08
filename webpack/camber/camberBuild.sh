@@ -25,4 +25,4 @@ cp build/camber-webpack.js.map ${MAP_OUTPUT}.js.map;
 # cleanup
 rm -rf build;
 
-echo "*** ReactGwt Webpack Build Complete ***";
+echo "*** Camber Webpack Build Complete ***";

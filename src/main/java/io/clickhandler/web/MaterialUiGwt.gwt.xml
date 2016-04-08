@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module>
+    <inherits name="io.clickhandler.web.ReactGwt"/>
+
+    <source path="materialUiGwt/client"/>
+    <source path="materialUiGwt/resources"/>
+    <public path="materialUiGwt/public"/>
+</module>
