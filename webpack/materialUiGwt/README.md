@@ -6,4 +6,4 @@
 
 ## Inspecting Dependency Graph
 - Generate stats file `webpack --config webpack.config.js --json > stats.json`
-- Go to [https://webpack.github.io/analyse/#modules] and upload json file
+- Go to https://webpack.github.io/analyse/#modules and upload json file
