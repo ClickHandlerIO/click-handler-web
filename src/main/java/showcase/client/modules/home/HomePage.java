@@ -1,6 +1,7 @@
 package showcase.client.modules.home;
 
 import io.clickhandler.web.materialUiGwt.client.FlatButton;
+import io.clickhandler.web.materialUiGwt.client.RaisedButton;
 import io.clickhandler.web.reactGwt.client.dom.CSSProps;
 import io.clickhandler.web.reactGwt.client.react.ReactComponent;
 import io.clickhandler.web.reactGwt.client.react.ReactElement;
@@ -20,6 +21,8 @@ public class HomePage extends SimpleRouteComponent<HomePage.Route, HomePage.Prop
 
     @Inject
     FlatButton flatButton;
+    @Inject
+    RaisedButton raisedButton;
 
     @Inject
     public HomePage() {
@@ -35,7 +38,8 @@ public class HomePage extends SimpleRouteComponent<HomePage.Route, HomePage.Prop
                 div("home page"),
                 flatButton.$($ -> {
                     $.setLabel("Test Button");
-                })
+                }),
+                raisedButton.$($ -> $.setLabel("Hello"))
 //                a($ -> $.onClick(e -> App.getRoutes().getGettingStartedRoutes().getGettingStartedPage().go()), "Go to Getting Started"),
 //                div(flatButton.$($ -> $.setBrand(Brand.SECONDARY),
 //                        "Im Here"

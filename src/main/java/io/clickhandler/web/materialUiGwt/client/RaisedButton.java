@@ -2,7 +2,6 @@ package io.clickhandler.web.materialUiGwt.client;
 
 import io.clickhandler.web.reactGwt.client.Func;
 import io.clickhandler.web.reactGwt.client.dom.CSSProps;
-import io.clickhandler.web.reactGwt.client.event.KeyboardEventHandler;
 import io.clickhandler.web.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.web.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.web.reactGwt.client.react.BaseProps;
@@ -17,15 +16,15 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class FlatButton extends ExternalComponent<FlatButton.Props> {
+public class RaisedButton extends ExternalComponent<RaisedButton.Props> {
 
     @Inject
-    public FlatButton() {
+    public RaisedButton() {
     }
 
     @Override
-    protected native ReactClass<FlatButton.Props> reactClass() /*-{
-        return $wnd.MaterialUi.FlatButton;
+    protected native ReactClass<RaisedButton.Props> reactClass() /*-{
+        return $wnd.MaterialUi.RaisedButton;
     }-*/;
 
     /**
@@ -40,16 +39,34 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         void setBackgroundColor(String backgroundColor);
 
         @JsProperty
+        String getClassName();
+
+        @JsProperty
+        void setClassName(String className);
+
+        @JsProperty
         boolean isDisabled();
 
         @JsProperty
         void setDisabled(boolean disabled);
 
         @JsProperty
-        String getHoverColor();
+        String getDisabledBackgroundColor();
 
         @JsProperty
-        void setHoverColor(String hoverColor);
+        void setDisabledBackgroundColor(String disabledBackgroundColor);
+
+        @JsProperty
+        String getDisabledLabelColor();
+
+        @JsProperty
+        void setDisabledLabelColor(String disabledLabelColor);
+
+        @JsProperty
+        boolean isFullWidth();
+
+        @JsProperty
+        void setFullWidth(boolean fullWidth);
 
         @JsProperty
         String getHref();
@@ -70,6 +87,12 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         void setLabel(String label);
 
         @JsProperty
+        String getLabelColor();
+
+        @JsProperty
+        void setLabelColor(String labelColor);
+
+        @JsProperty
         String getLabelPosition();
 
         @JsProperty
@@ -87,11 +110,19 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         @JsProperty
         void setLinkButton(boolean linkButton);
 
+        @Deprecated
         @JsProperty
-        KeyboardEventHandler getOnKeyboardFocus();
+        MouseEventHandler getOnClick();
+
+        @Deprecated
+        @JsProperty
+        void setOnClick(MouseEventHandler onClick);
 
         @JsProperty
-        void setOnKeyboardFocus(KeyboardEventHandler onKeyboardFocus);
+        MouseEventHandler getOnMouseDown();
+
+        @JsProperty
+        void setOnMouseDown(MouseEventHandler onMouseDown);
 
         @JsProperty
         MouseEventHandler getOnMouseEnter();
@@ -105,25 +136,17 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         @JsProperty
         void setOnMouseLeave(MouseEventHandler onMouseLeave);
 
-        @Deprecated
         @JsProperty
-        MouseEventHandler getOnClick();
-
-        @Deprecated
-        @JsProperty
-        void setOnClick(MouseEventHandler onClick);
+        MouseEventHandler getOnMouseUp();
 
         @JsProperty
-        boolean isKeyboardFocused();
+        void setOnMouseUp(MouseEventHandler onMouseUp);
 
         @JsProperty
-        void setKeyboardFocused(boolean keyboardFocused);
+        TouchEventHandler getOnTouchEnd();
 
         @JsProperty
-        boolean isFocused();
-
-        @JsProperty
-        void setFocused(boolean focused);
+        void setOnTouchEnd(TouchEventHandler onTouchEnd);
 
         @JsProperty
         TouchEventHandler getOnTouchStart();
@@ -136,12 +159,6 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
 
         @JsProperty
         void setPrimary(boolean primary);
-
-        @JsProperty
-        String getRippleColor();
-
-        @JsProperty
-        void setRippleColor(String rippleColor);
 
         @JsProperty
         boolean isSecondary();
@@ -166,14 +183,14 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         ////////////////////
 
         @JsOverlay
-        default Props onTouchTap(Func.Run onTouchTap) {
-            setOnTouchTap(onTouchTap);
+        default Props backgroundColor(String backgroundColor) {
+            setBackgroundColor(backgroundColor);
             return this;
         }
 
         @JsOverlay
-        default Props backgroundColor(String backgroundColor) {
-            setBackgroundColor(backgroundColor);
+        default Props className(String className) {
+            setClassName(className);
             return this;
         }
 
@@ -184,8 +201,20 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         }
 
         @JsOverlay
-        default Props hoverColor(String hoverColor) {
-            setHoverColor(hoverColor);
+        default Props disabledBackgroundColor(String disabledBackgroundColor) {
+            setDisabledBackgroundColor(disabledBackgroundColor);
+            return this;
+        }
+
+        @JsOverlay
+        default Props disabledLabelColor(String disabledLabelColor) {
+            setDisabledLabelColor(disabledLabelColor);
+            return this;
+        }
+
+        @JsOverlay
+        default Props fullWidth(boolean fullWidth) {
+            setFullWidth(fullWidth);
             return this;
         }
 
@@ -208,6 +237,12 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         }
 
         @JsOverlay
+        default Props labelColor(String labelColor) {
+            setLabelColor(labelColor);
+            return this;
+        }
+
+        @JsOverlay
         default Props labelPosition(String labelPosition) {
             setLabelPosition(labelPosition);
             return this;
@@ -225,15 +260,28 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
             return this;
         }
 
+        @Deprecated
         @JsOverlay
-        default Props onKeyboardFocus(KeyboardEventHandler onKeyboardFocus) {
-            setOnKeyboardFocus(onKeyboardFocus);
+        default Props onClick(MouseEventHandler onClick) {
+            setOnClick(onClick);
+            return this;
+        }
+
+        @JsOverlay
+        default Props onTouchTap(Func.Run onTouchTap) {
+            setOnTouchTap(onTouchTap);
+            return this;
+        }
+
+        @JsOverlay
+        default Props onMouseDown(MouseEventHandler onMouseDown) {
+            setOnMouseDown(onMouseDown);
             return this;
         }
 
         @JsOverlay
         default Props onMouseEnter(MouseEventHandler onMouseEnter) {
-            setOnMouseEnter(onMouseEnter);
+            ;
             return this;
         }
 
@@ -243,27 +291,20 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
             return this;
         }
 
-        @Deprecated
         @JsOverlay
-        default Props onClick(MouseEventHandler onClick) {
-            setOnClick(onClick);
+        default Props onMouseUp(MouseEventHandler onMouseUp) {
+            setOnMouseUp(onMouseUp);
             return this;
         }
 
         @JsOverlay
-        default Props keyboardFocused(boolean keyboardFocused) {
-            setKeyboardFocused(keyboardFocused);
+        default Props onTouchEnd(TouchEventHandler onTouchEnd) {
+            setOnTouchEnd(onTouchEnd);
             return this;
         }
 
         @JsOverlay
-        default Props focused(boolean focused) {
-            setFocused(focused);
-            return this;
-        }
-
-        @JsOverlay
-        default Props touchStart(TouchEventHandler onTouchStart) {
+        default Props onTouchStart(TouchEventHandler onTouchStart) {
             setOnTouchStart(onTouchStart);
             return this;
         }
@@ -271,12 +312,6 @@ public class FlatButton extends ExternalComponent<FlatButton.Props> {
         @JsOverlay
         default Props primary(boolean primary) {
             setPrimary(primary);
-            return this;
-        }
-
-        @JsOverlay
-        default Props rippleColor(String rippleColor) {
-            setRippleColor(rippleColor);
             return this;
         }
 
