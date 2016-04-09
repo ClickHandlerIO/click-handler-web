@@ -18,6 +18,7 @@ var config = {
     },
 
     plugins: [
+        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false // suppresses warnings, usually from module minification
