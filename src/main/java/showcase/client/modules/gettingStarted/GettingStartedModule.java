@@ -4,8 +4,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.RunAsyncCallback;
 import dagger.Component;
 import io.clickhandler.web.reactGwt.client.Func;
-import io.clickhandler.web.reactGwt.client.router.ModuleLoader;
-import io.clickhandler.web.reactGwt.client.router.RoutesBuilder;
+import io.clickhandler.web.reactRouterGwt.client.ModuleLoader;
+import io.clickhandler.web.reactRouterGwt.client.RoutesBuilder;
 import showcase.client.App;
 
 import javax.inject.Inject;

@@ -1,6 +1,6 @@
 package showcase.client.modules._gatekeepers;
 
-import io.clickhandler.web.reactGwt.client.router.*;
+import io.clickhandler.web.reactRouterGwt.client.*;
 import showcase.client.App;
 
 import javax.inject.Inject;

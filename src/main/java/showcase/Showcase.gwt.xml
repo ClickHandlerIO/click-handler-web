@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <module rename-to="app">
+    <inherits name="io.clickhandler.web.ReactGwt"/>
+    <inherits name="io.clickhandler.web.ReactRouterGwt"/>
     <inherits name="io.clickhandler.web.MaterialUiGwt"/>
 
     <source path="client"/>

@@ -2,10 +2,10 @@ package showcase.client.modules.gettingStarted;
 
 import io.clickhandler.web.reactGwt.client.react.ReactComponent;
 import io.clickhandler.web.reactGwt.client.react.ReactElement;
-import io.clickhandler.web.reactGwt.client.router.RootRoute;
-import io.clickhandler.web.reactGwt.client.router.SimpleRouteComponent;
-import io.clickhandler.web.reactGwt.client.router.SimpleRouteProps;
-import io.clickhandler.web.reactGwt.client.router.SimpleRouteProxy;
+import io.clickhandler.web.reactRouterGwt.client.RootRoute;
+import io.clickhandler.web.reactRouterGwt.client.SimpleRouteComponent;
+import io.clickhandler.web.reactRouterGwt.client.SimpleRouteProps;
+import io.clickhandler.web.reactRouterGwt.client.SimpleRouteProxy;
 import jsinterop.annotations.JsType;
 import showcase.client.App;
 

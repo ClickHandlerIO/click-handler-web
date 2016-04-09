@@ -1,5 +1,6 @@
 package showcase.client.modules;
 
+import io.clickhandler.web.reactRouterGwt.client.RootModule;
 import showcase.client.modules.gettingStarted.GettingStartedModule;
 import showcase.client.modules.home.HomeModule;
 
@@ -7,7 +8,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class ShowcaseRootModule extends io.clickhandler.web.reactGwt.client.router.RootModule {
+public class ShowcaseRootModule extends RootModule {
     @Inject
     HomeModule.Loader home;
     @Inject

@@ -6,7 +6,7 @@ import elemental.html.Console;
 import elemental.html.Window;
 import io.clickhandler.web.reactGwt.client.dom.CSSProps;
 import io.clickhandler.web.reactGwt.client.dom.DOM;
-import io.clickhandler.web.reactGwt.client.router.History;
+import io.clickhandler.web.reactRouterGwt.client.History;
 import jsinterop.annotations.JsIgnore;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
