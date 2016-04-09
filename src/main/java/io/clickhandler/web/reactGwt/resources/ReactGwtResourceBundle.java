@@ -8,6 +8,6 @@ import com.google.gwt.resources.client.TextResource;
 public interface ReactGwtResourceBundle extends ClientBundle {
     ReactGwtResourceBundle INSTANCE = GWT.create(ReactGwtResourceBundle.class);
 
-    @Source("reactGwt-webpack.js")
+    @Source("react-gwt-webpack.js")
     TextResource reactGwtWebpack();
 }

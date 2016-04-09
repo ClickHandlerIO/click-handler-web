@@ -3,7 +3,7 @@ var path = require('path');
 var buildPath = path.resolve(__dirname, 'build');
 
 var config = {
-    entry: [path.join(__dirname, '/reactGwt.js')],
+    entry: [path.join(__dirname, '/app.js')],
 
     resolve: {
         extensions: ["", ".js", ".jsx"] // When require, do not have to add these extensions to file's name

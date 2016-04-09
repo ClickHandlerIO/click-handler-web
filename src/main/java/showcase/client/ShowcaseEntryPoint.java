@@ -1,13 +1,15 @@
 package showcase.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import io.clickhandler.web.camber.client.Camber;
+import io.clickhandler.web.reactGwt.client.ReactGwt;
 
 public class ShowcaseEntryPoint implements EntryPoint {
     @Override
     public void onModuleLoad() {
         // inject javascript and css
-        Camber.init();
+        ReactGwt.init();
+//        MaterialUi.init();
+//        Camber.init();
 
         // wire the app
         final App app = App.get();

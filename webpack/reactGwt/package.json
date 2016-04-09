@@ -1,0 +1,25 @@
+{
+  "name": "react-gwt-webpack",
+  "version": "0.1.0-SNAPSHOT",
+  "description": "Webpack build of react-gwt JavaScript dependencies",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClickHandlerIO/clickhandler-web.git"
+  },
+  "scripts": {
+    "start": "./build.sh"
+  },
+  "babel": {
+    "preset": ["es2015-webpack", "react"]
+  },
+  "devDependencies": {
+    "webpack": "git@github.com:webpack/webpack.git#v2.1.0-beta.4"
+  },
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-router": "^2.0.1",
+    "react-tap-event-plugin": "^0.2.2"
+  }
+}

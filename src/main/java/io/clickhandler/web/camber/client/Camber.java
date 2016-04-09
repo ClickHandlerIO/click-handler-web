@@ -6,7 +6,6 @@ import io.clickhandler.web.reactGwt.client.ReactGwt;
 
 public class Camber {
     public static void init() {
-        ReactGwt.init();
         ScriptInjector.fromString(CamberResourceBundle.INSTANCE.camberWebpack().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
     }
 }
