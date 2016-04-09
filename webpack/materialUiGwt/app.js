@@ -1,3 +1,5 @@
+import injectTapEventPlugin from "react-tap-event-plugin";
+
 import AppBar from 'material-ui/lib/app-bar';
 import AutoComplete from 'material-ui/lib/auto-complete'
 import Avatar from 'material-ui/lib/avatar';
@@ -205,3 +207,4 @@ window.MaterialUi = {
         ColorManipulator: ColorManipulator
     }
 };
+injectTapEventPlugin();
