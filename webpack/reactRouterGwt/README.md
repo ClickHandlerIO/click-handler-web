@@ -5,5 +5,5 @@
 - Generate javascript `npm start`
 
 ## Inspecting Dependency Graph
-- Generate stats file `webpack --config webpack.config.js --json > stats.json`
+- Generate stats file `webpack --config webpack.config.js --json > build/stats.json`
 - Go to https://webpack.github.io/analyse/#modules and upload json file

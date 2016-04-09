@@ -14,9 +14,12 @@ var config = {
     externals: {
         "react": "React",
         "React": "React",
+        "./React": "React",
         "react-dom": "ReactDOM",
-        "react-addons-transition-group": "ReactTransitionGroup",
-        "react-addons-css-transition-group": "ReactCssTransitionGroup"
+        "ReactDOM": "ReactDOM",
+        "./ReactDOM": "ReactDOM"
+        // "react-addons-transition-group": "ReactTransitionGroup",
+        // "react-addons-css-transition-group": "ReactCssTransitionGroup"
     },
 
     devtool: 'source-map', //Render source-map file for final build
