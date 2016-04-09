@@ -1,6 +1,7 @@
 package showcase.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import io.clickhandler.web.materialUiGwt.client.MaterialUi;
 import io.clickhandler.web.reactGwt.client.ReactGwt;
 
 public class ShowcaseEntryPoint implements EntryPoint {
@@ -8,7 +9,7 @@ public class ShowcaseEntryPoint implements EntryPoint {
     public void onModuleLoad() {
         // inject javascript and css
         ReactGwt.init();
-//        MaterialUi.init();
+        MaterialUi.init();
 //        Camber.init();
 
         // wire the app
